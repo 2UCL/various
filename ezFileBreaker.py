@@ -1,6 +1,6 @@
 import os
 
-file_names = ["20260221_160931.JPG","20260221_161053~2.JPG"]
+file_names = [""]
 
 for fn in file_names:
     print("Processing " + fn + "...")
@@ -16,4 +16,5 @@ for fn in file_names:
             f.write(b"\xff")
         f.flush()
         
+
 print("Done!\n")
