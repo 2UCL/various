@@ -1,11 +1,19 @@
 import os
 
-file_names = [""]
+file_names = ["20260221_160931.JPG","20260221_161053~2.JPG"]
 
 for fn in file_names:
+    print("Processing " + fn + "...")
     fsize = os.path.getsize(fn)
 
     with open(fn, "wb") as f:
         for i in range(fsize):
             f.write(bytes(1))
         f.flush()
+    
+    with open(fn, "wb") as f:
+        for i in range(fsize):
+            f.write(b"\xff")
+        f.flush()
+        
+print("Done!\n")
